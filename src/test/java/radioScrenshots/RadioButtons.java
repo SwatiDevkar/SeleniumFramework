@@ -17,12 +17,15 @@ public class RadioButtons extends TestBase{
 			
 		List<WebElement> radios = driver.findElements(By.xpath("//*[@name='like']"));
 		System.out.println("Number of Radios: "+radios.size());
-		for (int i = 0; i < radios.size(); i++) {
-			radios.get(i).click();
-			System.out.println("Radio clicked: "+driver.findElement(By.xpath("//*[@name='like']/following-sibling::label")));
+		radios.get(0).click();
+		
+		
+		/*for (int i = 0; i < radios.size()-1; i++) {
+			radios.get(0).click();
+			System.out.println(driver.findElement(By.xpath("//*[@name='like']/following-sibling::label"+"["+i+"]")).getAttribute("for"));
 			
-		}
-		Thread.sleep(2000);
+		}*/
+		
 		
 		
 		driver.quit();

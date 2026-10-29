@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-28T10:19:41 EDT" name="Default suite" finished-at="2026-10-28T10:19:49 EDT" duration-ms="7408">
+  <suite started-at="2026-10-28T23:57:16 EDT" name="Default suite" finished-at="2026-10-28T23:57:23 EDT" duration-ms="6390">
     <groups>
     </groups>
-    <test started-at="2026-10-28T10:19:41 EDT" name="Default test" finished-at="2026-10-28T10:19:49 EDT" duration-ms="7408">
-      <class name="explicitWait.Waitng">
-        <test-method is-config="true" signature="init(org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:explicitWait.Waitng@6356695f]" started-at="2026-10-28T10:19:41 EDT" name="init" finished-at="2026-10-28T10:19:42 EDT" duration-ms="224" status="PASS">
+    <test started-at="2026-10-28T23:57:16 EDT" name="Default test" finished-at="2026-10-28T23:57:23 EDT" duration-ms="6390">
+      <class name="suiteB.GoogleSearchName">
+        <test-method is-config="true" signature="init(org.testng.ITestContext,org.testng.ITestResult)[pri:0, instance:suiteB.GoogleSearchName@1fa268de]" started-at="2026-10-28T23:57:16 EDT" name="init" finished-at="2026-10-28T23:57:17 EDT" duration-ms="168" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@706cb08]]>
+                <![CDATA[org.testng.TestRunner@70abf9b0]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=Waitng.waitEx()[pri:0, instance:explicitWait.Waitng@6356695f] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=GoogleSearchName.testGoogleName()[pri:0, instance:suiteB.GoogleSearchName@1fa268de] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="waitEx()[pri:0, instance:explicitWait.Waitng@6356695f]" started-at="2026-10-28T10:19:42 EDT" name="waitEx" finished-at="2026-10-28T10:19:48 EDT" duration-ms="6848" status="PASS">
+        <test-method signature="testGoogleName()[pri:0, instance:suiteB.GoogleSearchName@1fa268de]" started-at="2026-10-28T23:57:17 EDT" name="testGoogleName" finished-at="2026-10-28T23:57:22 EDT" duration-ms="5947" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- waitEx -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:explicitWait.Waitng@6356695f]" started-at="2026-10-28T10:19:48 EDT" name="quit" finished-at="2026-10-28T10:19:49 EDT" duration-ms="293" status="PASS">
+        </test-method> <!-- testGoogleName -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suiteB.GoogleSearchName@1fa268de]" started-at="2026-10-28T23:57:22 EDT" name="quit" finished-at="2026-10-28T23:57:23 EDT" duration-ms="241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- explicitWait.Waitng -->
+      </class> <!-- suiteB.GoogleSearchName -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

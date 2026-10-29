@@ -17,6 +17,8 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -79,16 +81,21 @@ public class TestBase {
 	}
 	
 	// true-present and not hidden
-	public boolean isElementPresent(String locator) {
+	public boolean isElementPresent(String locatorKey) {
 		WebElement e = null;
-		try {
+		/*try {
 			e = driver.findElement(By.id(locator));
 		} catch(Exception ex) {
 			return false;
 		}
 		if(!e.isDisplayed())
 			return false;
-			return true;
+			return true;*/
+		By locator = getObjectLocator(locatorKey);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.presenceOfElementLocated((locator)));
+		wait.until((ExpectedConditions.visibilityOfElementLocated((locator))));
+		return true;
 	}
 	
 	public void selectDate(String dateToSelect) {
@@ -127,6 +134,20 @@ public class TestBase {
 		
 		System.out.println(displayedMonthYear);
 	}
+	
+	//To return By object corresponding to locator
+	public By getObjectLocator(String locator) {		
+		if(locator.endsWith("_id")) 
+			return By.xpath(prop.getProperty(locator));
+		else if(locator.endsWith("_name")) 
+			return By.xpath(locator);
+		else if(locator.endsWith("_cssSelector")) 
+			return By.xpath(prop.getProperty(locator));
+		else 			
+			return By.xpath(prop.getProperty(locator));
+	}
+	
+	
 	
 	@BeforeMethod(alwaysRun = true)
 	public void init(ITestContext context, ITestResult result) {

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="explicitWait.Waitng">
+      <class name="radioScrenshots.RadioButtons">
         <methods>
+          <include name="tesDropDown"/>
           <include name="quit"/>
           <include name="init"/>
-          <include name="waitEx"/>
         </methods>
-      </class> <!-- explicitWait.Waitng -->
+      </class> <!-- radioScrenshots.RadioButtons -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
