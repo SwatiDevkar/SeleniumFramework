@@ -1,8 +1,8 @@
 target/
+reports/
+test-output/
 .classpath
 .project
 .settings/
 *.class
 *.log
-.DS_Store
-Thumbs.db
